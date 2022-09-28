@@ -1,0 +1,49 @@
+.allBtns {
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    max-width: 800px;
+    flex-wrap: wrap;
+    margin: 70px;
+
+}
+
+button {
+    color: black;
+    border: 5px, solid, black;
+    border-radius: 5px;
+    width: 90px;
+}
+
+/* #black:hover {
+
+} */
+
+#sketchpad {
+    width: 960px;
+    height: 960px;
+    border-right: 15px solid black;
+    border-bottom: 15px solid black;
+    margin: 100px;
+}
+
+label, #cell-dimensions {
+    display: block;
+    width: 200px;
+    margin: auto;
+    text-align: center;
+}
+
+.textInput {
+    width: 40px;
+    margin: auto;
+
+}
+
+#textDimensions {
+    width: 40px;
+    text-align: center;
+}
+
+
+

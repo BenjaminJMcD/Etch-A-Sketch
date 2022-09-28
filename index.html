@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Odin Etch-A-Sketch Project</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+<!--  
+    - black marker button
+    - rainbow marker button
+    - choose color button (look up color generator popup)
+    - erase button (white)
+    - reset button (all divs => white)
+    - input controlling amount of divs in box
+    - Box that will house js-variable divs
+    - input (scroll? range?) for cell dimensions
+-->
+
+        <div class="allBtns">
+            <button id="black">Black</button>
+            <button id="rainbow">Rainbow</button>
+            <button id="chooseColor">Color</button>
+            <button id="erase">Erase</button>
+            <button id="reset">Reset</button>
+        </div>
+
+        <div id="sketchPad"></div>
+
+        <div id="rangeBox">
+            <label for="cell-dimensions">Choose Cell Dimensions</label>
+            <input type="range" id="cell-dimensions" name="cell-dimensions" min="16" max="960">
+            <div class="textInput">
+                <input id="textDimensions">
+            </div>
+        </div>
+
+
+
+    <script src="scrips.js"></script>
+    </body>
+</html>
