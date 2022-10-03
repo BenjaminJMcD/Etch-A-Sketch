@@ -19,12 +19,26 @@ button {
 
 } */
 
-#sketchpad {
-    width: 960px;
-    height: 960px;
+#sketchPad {
+    width: 700px;
+    height: 700px;
     border-right: 15px solid black;
     border-bottom: 15px solid black;
     margin: 100px;
+    display: flex;
+    flex-wrap:wrap;
+}
+
+#sketchPad div {
+    background-color: rgb(9, 9, 70);
+    flex-grow:1;
+    display:flex;
+    flex-direction: column;
+}
+
+#sketchPad div div {
+    background-color:bisque;
+    
 }
 
 label, #cell-dimensions {
