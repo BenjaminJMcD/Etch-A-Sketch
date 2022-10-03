@@ -10,7 +10,7 @@
 
 button {
     color: black;
-    border: 5px, solid, black;
+    border: 5px solid black;
     border-radius: 5px;
     width: 90px;
 }
@@ -22,8 +22,7 @@ button {
 #sketchPad {
     width: 700px;
     height: 700px;
-    border-right: 15px solid black;
-    border-bottom: 15px solid black;
+    border: 5px solid black;
     margin: 100px;
     display: flex;
     flex-wrap:wrap;
@@ -37,8 +36,11 @@ button {
 }
 
 #sketchPad div div {
-    background-color:bisque;
-    
+    background-color:white;   
+}
+
+#sketchPad div div:hover {
+    background-color: black;
 }
 
 label, #cell-dimensions {

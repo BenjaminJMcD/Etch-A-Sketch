@@ -6,6 +6,7 @@ const divSquares = document.getElementById("divSquares");
 
 //console.log(typeof(inputSide));
 
+let inputSide = document.getElementById("textDimensions");
 inputSide = 16;
 
 
@@ -39,8 +40,8 @@ let children = sketchPad.childNodes;
 console.log(children);
 
  repeat(function childDiv() {
-     const child = document.createElement("div");
-    for (let i=0; i<inputSide; i++) {
+     for (let i=0; i<inputSide; i++) {
+        const child = document.createElement("div");
         const chunk = children[i];
         chunk.appendChild(child);}}
      , inputSide);
