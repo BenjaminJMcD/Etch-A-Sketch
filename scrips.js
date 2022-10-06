@@ -1,28 +1,27 @@
+
+
+
+
+
+
+
+let inputSide;
+inputSide = 96;
+
+// ----------- INPUT FOR GRID DIMENSIONS-----------
+// let rangeBox = document.getElementById('cell-dimensions').valueAsNumber;
+// let textBox = document.getElementById('textDimensions');
+// textBox.addEventListener('input', updateDimensions);
+// function updateDimensions() {
+//     textBox.valueAsNumber = inputSide;
+// }
+
+
+
+
+// ---------- SKETCHPAD GRID -------------
+
 const sketchPad = document.getElementById("sketchPad");
-const divSquares = document.getElementById("divSquares");
-//const inputSide = document.getElementById("textDimensions").value;
-
-//inputSide.addEventListener("change", multiplyValue);
-
-//console.log(typeof(inputSide));
-
-let inputSide = document.getElementById("textDimensions");
-inputSide = 16;
-
-
-//  function multiplyValue(inputSide) {
-//          if (isNaN(inputSide)) {
-//              return 0;
-//          }
-//         divAmount = (inputSide * inputSide);
-//         return divAmount;
-//  }
- 
-//console.log(inputSide);
-
-//multiplyValue(3);
-
-// console.log(divAmount);
 
 function appendDiv() {
     const singleDiv = document.createElement("div");
@@ -37,7 +36,6 @@ for (let i = 0; i < inputSide; i++) {
 }
 
 let children = sketchPad.childNodes;
-console.log(children);
 
  repeat(function childDiv() {
      for (let i=0; i<inputSide; i++) {
@@ -45,67 +43,184 @@ console.log(children);
         const chunk = children[i];
         chunk.appendChild(child);}}
      , inputSide);
+    
 
  function repeat(childDiv, inputSide) {
      childDiv();
      inputSide && --inputSide && repeat(childDiv, inputSide);
  }
 
+// --------- BUTTON FUNCTIONS -------------
+
+const black = document.getElementById('black');
+const rainbow = document.getElementById('rainbow');
+const colorButton = document.getElementById('colorButton')
+const color = document.getElementById('chooseColor');
+const erase = document.getElementById('erase');
+const reset = document.getElementById('reset');
+
+let choice
+
+black.addEventListener('click', function decision () {
+    buttonChoice(1);
+});
+rainbow.addEventListener('click', function decision () {
+    buttonChoice(2);
+});
+colorButton.addEventListener('click', function decision () {
+    try {
+        colorButton.showPicker();
+        // A color picker is shown.
+      } catch (error) {
+        // Use external library when this fails.
+      }
+    buttonChoice(3);
+});
+erase.addEventListener('click', function decision () {
+    buttonChoice(4);
+});
+reset.addEventListener('click', function decision () {
+    buttonChoice(5);
+});
+
+console.log(choice)
+console.log(typeof(choice))
+
+function buttonChoice(choice) {
+    if (choice == 1) {              //BLACK
+
+        console.log(1);
+
+        let firstDiv = Array.from(children);
+
+        for (i=0; i<inputSide; i++) {
+            let gridSquares = Array.from(firstDiv[i].childNodes);
+        
+            for (j=0; j<inputSide; j++) {
+                let single = gridSquares[i, j];
+
+                //single.classList.remove("rainbowNow", "eraseNow");
+        
+                single.addEventListener("mouseover", function changeToBlack() {
+                    single.style.backgroundColor = "black";
+                });
+            }
+        }
+    }
+
+    else if (choice == 2) {         //RAINBOW
+
+        console.log(2);
 
 
 
-// function divChild() {
-//     const div = document.createElement("div");
-//     const chile = childArray[i]
-//     for (i=0; i<children.length; i++) {
-//         children.appendChild(chile());
-//     }
-// }
+        let firstDiv = Array.from(children);
 
-//childArray.forEach(doIt);
+        for (i=0; i<inputSide; i++) {
+            let gridSquares = Array.from(firstDiv[i].childNodes);
+        
+            for (j=0; j<inputSide; j++) {
+                let single = gridSquares[i, j];
+                             
 
-// function doIt() {
-// for (let i=0; i<children.length; i++) {
-//     const child = document.createElement("div");
-//     children[i].appendChild(child);
-// }
-// }
+                single.addEventListener("mouseover", function rainbowRandom() {
+                    let variable = Math.floor(Math.random() * 6)
+                    if (variable == 0) {
+                        single.style.backgroundColor = "rgb(0, 255, 0)";
+                    
+                    }                     
+                    else if (variable == 1) {
+                        single.style.backgroundColor = "rgb(255, 0, 0)";
+                    
+                    }                     
+                    else if (variable == 2) {
+                        single.style.backgroundColor = "rgb(0, 0, 255)";
+                    }                     
+                    else if (variable == 3) {
+                        single.style.backgroundColor = "rgb(255, 255, 0)";
+                    }                    
+                    else if (variable = 4) {
+                        single.style.backgroundColor = "rgb(255, 0, 255)";
+                    }                    
+                    else if (variable == 5) {
+                        single.style.backgroundColor = "rgb(0, 255, 255)";
+                    }                                     
+                     
+                 });
+             }
+        }
+    }
 
-// repeat(function childDiv() {
-//     const child = document.createElement("div");
-//     children.appendChild(child);}, inputSide);
+    else if (choice == 3) {         //COLOR
 
-// function repeat(childDiv, inputSide) {
-//     childDiv();
-//     inputSide && --inputSide && repeat(childDiv, inputSide);
-// }
-
-
-
-
-
-// repeat(function appendDiv() {
-//       const singleDiv = document.createElement("div");
-//       sketchPad.appendChild(singleDiv);} 
-//       ,
-//       inputSide);
-    
-//   function repeat(appendDiv, inputSide) {
-//       appendDiv();
-//       inputSide && --inputSide && repeat(appendDiv, inputSide);
-//}
-
-//  repeatChild(function childDivs() {
-//      const childDiv = document.createElement("div");
-//      singleDiv.appendChild(childDiv);}
-//      , inputSide);
-
-//  function repeatChild(childDivs, inputSide) {
-//      childDivs();
-//      inputSide && --inputSide && repeatChild(childDivs, inputSide);
-//  }
+        console.log(3);
 
 
 
-// create squares from 16-960 squared divs
-// take number given. square it. append divSquares that many times -1 and add to HTML
+        let firstDiv = Array.from(children);
+
+        for (i=0; i<inputSide; i++) {
+            let gridSquares = Array.from(firstDiv[i].childNodes);
+        
+            for (j=0; j<inputSide; j++) {
+                let single = gridSquares[i, j];
+                
+                single.classList.remove("blackNow", "rainbowNow", "eraseNow");
+
+
+                
+                let colorChoice = document.getElementById("chooseColor")
+                
+                color.addEventListener("change", function changeColor() {
+                    let newColor = colorChoice.value;
+
+                    single.addEventListener("mouseover", function setColor() {
+                            single.style.backgroundColor = newColor;
+                    })
+                })
+            }
+        }    
+    }
+
+    else if (choice == 4) {         //ERASE
+
+        console.log(4)
+
+        let firstDiv = Array.from(children);
+
+        for (i=0; i<inputSide; i++) {
+            let gridSquares = Array.from(firstDiv[i].childNodes);
+        
+            for (j=0; j<inputSide; j++) {
+                let single = gridSquares[i, j];
+
+                single.classList.remove ("blackNow", "rainbowNow")
+        
+                 single.addEventListener("mouseover", function changeToWhite() {
+                     single.style.backgroundColor = "white";
+                 });
+            }
+        }
+
+    }
+
+    else if (choice == 5) {         //RESET ???
+
+        console.log(5);
+
+         let firstDiv = Array.from(children);
+
+         for (i=0; i<inputSide; i++) {
+             let gridSquares = Array.from(firstDiv[i].childNodes);
+        
+             for (j=0; j<inputSide; j++) {
+                 let single = gridSquares[i, j];
+
+                single.style.backgroundColor = null;
+            }
+        }
+    }
+}
+
+
+

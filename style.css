@@ -29,15 +29,14 @@ button {
 }
 
 #sketchPad div {
-    background-color: rgb(9, 9, 70);
     flex-grow:1;
     display:flex;
     flex-direction: column;
 }
 
-#sketchPad div div {
+/* #sketchPad div div {
     background-color:white;   
-}
+} */
 
 #sketchPad div div:hover {
     background-color: black;
@@ -62,4 +61,19 @@ label, #cell-dimensions {
 }
 
 
+/* .blackNow {
+    background-color: black;
+}
+
+.rainbowNow {
+    background-color: var(toBeDone)
+}
+
+.eraseNow {
+    background-color: white;
+} */
+
+.reset {
+    background-color: white;
+}
 
