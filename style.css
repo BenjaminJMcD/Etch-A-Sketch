@@ -4,28 +4,28 @@
     height: 50px;
     max-width: 800px;
     flex-wrap: wrap;
-    margin: 70px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
 
 }
 
-button {
+.allBtns button {
     color: black;
     border: 5px solid black;
     border-radius: 5px;
     width: 90px;
 }
 
-/* #black:hover {
-
-} */
-
 #sketchPad {
     width: 700px;
     height: 700px;
     border: 5px solid black;
-    margin: 100px;
+    margin-top: 50px;
     display: flex;
-    flex-wrap:wrap;
+    margin-left:auto;
+    margin-right: auto;
 }
 
 #sketchPad div {
@@ -60,18 +60,17 @@ label, #cell-dimensions {
     text-align: center;
 }
 
-
-/* .blackNow {
-    background-color: black;
+#rangeDisplay {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 5px;
 }
 
-.rainbowNow {
-    background-color: var(toBeDone)
+#inputDescription {
+    width: 140px;
+    text-align:center;
+    margin: auto;
 }
-
-.eraseNow {
-    background-color: white;
-} */
 
 .reset {
     background-color: white;

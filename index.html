@@ -6,17 +6,6 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-<!--  
-    - black marker button
-    - rainbow marker button
-    - choose color button (look up color generator popup)
-    - erase button (white)
-    - reset button (all divs => white)
-    - input controlling amount of divs in box
-    - Box that will house js-variable divs
-    - input (scroll? range?) for cell dimensions
--->
-
         <div class="allBtns">
             <button id="black">Black</button>
             <button id="rainbow">Rainbow</button>
@@ -27,10 +16,12 @@
 
         <div id="rangeBox">
             <label for="cell-dimensions">Change Cell Dimensions</label>
-            <input type="range" id="cell-dimensions" name="cell-dimensions" min="16" max="96">
+            <p id="rangeDisplay"></p>
+            <input type="range" id="cell-dimensions" name="cell-dimensions" min="16" max="96" value="16">
             <div class="textInput">
                 <input id="textDimensions" placeholder="16-96">
             </div>
+            <p id="inputDescription">Type value (16-96) and press Enter</p>
         </div>
 
         <div id="sketchPad"></div>
