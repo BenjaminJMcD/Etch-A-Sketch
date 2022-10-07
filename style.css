@@ -1,31 +1,75 @@
+h1 {
+    font-family:'Courier New', Courier, monospace;
+    text-align:center;
+    background-color:rgb(236, 236, 236);
+    margin:0;
+    padding-top:10px;
+    padding-bottom:10px;
+    font-size:48px;
+}
+
+.gameContainer {
+    display: flex;
+    background-color: rgb(75, 92, 176);
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:30px;
+    height: 650px;
+}
+
 .allBtns {
     display: flex;
-    justify-content: space-between;
-    height: 50px;
-    max-width: 800px;
-    flex-wrap: wrap;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    margin-left: auto;
-    margin-right: auto;
-
+    flex-direction: column;
+    justify-content:space-between;
+    margin-left:auto;
+    margin-right:auto;
 }
 
 .allBtns button {
+    font-family:'Courier New', Courier, monospace;
+    font-weight:bolder;
+    font-size:16px;
     color: black;
+    background-color:rgb(236, 236, 236);
     border: 5px solid black;
     border-radius: 5px;
     width: 90px;
+    height: 65px;
+    margin-bottom:25px;
+}
+
+#rangeBox {
+    background-color:rgb(236, 236, 236);
+    padding: 5px;
+    border: 5px solid black;
+    border-radius: 5px;
+}
+
+label {
+    font-family:'Courier New', Courier, monospace;
+    font-weight:bolder;
+    font-size:18px;
+}
+
+p {
+    font-family:'Courier New', Courier, monospace;
+    font-size:16px;
 }
 
 #sketchPad {
     width: 700px;
     height: 700px;
     border: 5px solid black;
-    margin-top: 50px;
     display: flex;
     margin-left:auto;
     margin-right: auto;
+    background-color:white;
 }
 
 #sketchPad div {
@@ -50,7 +94,7 @@ label, #cell-dimensions {
 }
 
 .textInput {
-    width: 40px;
+    width:50px;
     margin: auto;
 
 }

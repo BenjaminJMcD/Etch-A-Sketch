@@ -6,30 +6,29 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <div class="allBtns">
-            <button id="black">Black</button>
-            <button id="rainbow">Rainbow</button>
-            <button id="colorButton">Color<input type="color" id="chooseColor"></button>
-            <button id="erase">Erase</button>
-            <button id="reset">Reset</button>
-        </div>
+        <h1>==Etch-A-Sketch==</h1>
+        <div class="gameContainer">
+            <div class="controls">
+                <div class="allBtns">
+                    <button id="black">Black</button>
+                    <button id="rainbow">Rainbow</button>
+                    <button id="colorButton">Color<input type="color" id="chooseColor"></button>
+                    <button id="erase">Erase</button>
+                    <button id="reset">Reset</button>
+                </div>
 
-        <div id="rangeBox">
-            <label for="cell-dimensions">Change Cell Dimensions</label>
-            <p id="rangeDisplay"></p>
-            <input type="range" id="cell-dimensions" name="cell-dimensions" min="16" max="96" value="16">
-            <div class="textInput">
-                <input id="textDimensions" placeholder="16-96">
+                <div id="rangeBox">
+                    <label for="cell-dimensions">Change Cell Dimensions</label>
+                    <p id="rangeDisplay"></p>
+                    <input type="range" id="cell-dimensions" name="cell-dimensions" min="16" max="96" value="16">
+                    <div class="textInput">
+                        <input id="textDimensions" placeholder="16-96">
+                    </div>
+                    <p id="inputDescription">Type value (16-96) and press Enter</p>
+                </div>
             </div>
-            <p id="inputDescription">Type value (16-96) and press Enter</p>
+            <div id="sketchPad"></div>
         </div>
-
-        <div id="sketchPad"></div>
-
-
-
-
-
 
     <script src="scrips.js"></script>
     </body>

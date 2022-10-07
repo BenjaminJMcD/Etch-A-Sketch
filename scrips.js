@@ -15,7 +15,8 @@ createGrid(16);
 rangeSlider.addEventListener("input", function displayChange() {
     let x = document.getElementById("cell-dimensions");
     let currentVal = x.value;
-    rangeDisplay.textContent = `${currentVal}x${currentVal}`;  
+    rangeDisplay.textContent = `${currentVal}x${currentVal}`;
+    textBox.value = x.value; 
 });
 
     //Update slider and cell dimensions with text box
